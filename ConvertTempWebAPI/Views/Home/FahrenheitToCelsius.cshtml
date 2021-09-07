@@ -1,0 +1,27 @@
+﻿@model ConvertTempWebAPI.Models.Temperature
+
+@{
+    ViewData["Title"] = "FahrenheitToCelsius";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Convert Fahrenheit to Celsius  </h1>
+    
+</div>
+
+<div class="text-center">
+    <form asp-action="FahrenheitToCelsius">
+        <label for="ftemp">Please enter the temperature</label>
+        <input type="text" id="ftemp" name="ftemp"><br><br>
+        <input type="submit" value="Enter">
+    </form>
+</div>
+
+
+<div class="text-center">
+    <a asp-action="Index">Back to Home</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
